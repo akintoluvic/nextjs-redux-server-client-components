@@ -12,6 +12,8 @@ export default async function Home() {
   return (
     <main>
       <PokemonTable pokemons={data} />
+      <br></br>
+      <div>SSR below</div>
       <SSRPokemonTable />
     </main>
   );
