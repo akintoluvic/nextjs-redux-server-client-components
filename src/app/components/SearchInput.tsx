@@ -25,7 +25,6 @@ const SearchInput = () => {
 
   useEffect(() => {
     dispatch(pokemonApi.endpoints.search.initiate(search));
-    console.log(search);
   }, [dispatch, search]);
 
   return (
