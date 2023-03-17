@@ -1,10 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit"
+import { pokemonApi } from "./pokemonApi"
 
 import searchReducer from './searchSlice'
 
 export const store = configureStore({
     reducer: {
-        search: searchReducer
+        search: searchReducer,
+        pokemonApi: pokemonApi.reducer
     }
 })
 
