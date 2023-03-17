@@ -1,4 +1,5 @@
 import SearchInput from "./components/SearchInput";
+import Providers from "./components/Provider";
 
 import { store } from "@/store";
 import { setStartupPokemon } from "@/store/searchSlice";
@@ -11,7 +12,9 @@ export default async function Home() {
   return (
     <main>
       <br></br>
-      <SearchInput />
+      <Providers>
+        <SearchInput />
+      </Providers>
     </main>
   );
 }
