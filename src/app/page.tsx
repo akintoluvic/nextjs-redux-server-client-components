@@ -1,5 +1,4 @@
-import PokemonTable from "./components/PokemonTable";
-import SSRPokemonTable from "./components/SSRPokemonTable";
+import SearchInput from "./components/SearchInput";
 
 import { store } from "@/store";
 import { setStartupPokemon } from "@/store/searchSlice";
@@ -11,10 +10,8 @@ export default async function Home() {
 
   return (
     <main>
-      <PokemonTable pokemons={data} />
       <br></br>
-      <div>SSR below</div>
-      <SSRPokemonTable />
+      <SearchInput />
     </main>
   );
 }
