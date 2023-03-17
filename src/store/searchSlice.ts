@@ -25,3 +25,6 @@ const searchSlice = createSlice({
         }
     }
 })
+
+export const { setSearch, setStartupPokemon } = searchSlice.actions
+export default searchSlice.reducer
