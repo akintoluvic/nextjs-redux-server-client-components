@@ -19,11 +19,13 @@ const SearchInput = () => {
   const search = useAppSelector((state) => state.search.search);
   const startupPokemon = useAppSelector((state) => state.search.startupPokemon);
   const data = useAppSelector(
-    (state) => state.pokemonApi.queries[`search("${search})`]?.data as Pokemon[]
+    (state) =>
+      state.pokemonApi.queries[`search("${search}")`]?.data as Pokemon[]
   );
 
   useEffect(() => {
     dispatch(pokemonApi.endpoints.search.initiate(search));
+    console.log(search);
   }, [dispatch, search]);
 
   return (
